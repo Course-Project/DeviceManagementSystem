@@ -14,14 +14,16 @@
 		20B76F9C1964538600605B9F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B76F9B1964538600605B9F /* main.m */; };
 		20B76FA01964538600605B9F /* TACAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B76F9F1964538600605B9F /* TACAppDelegate.m */; };
 		20B76FA31964538600605B9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20B76FA11964538600605B9F /* Main.storyboard */; };
-		20B76FA61964538600605B9F /* TACFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B76FA51964538600605B9F /* TACFirstViewController.m */; };
-		20B76FA91964538600605B9F /* TACSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B76FA81964538600605B9F /* TACSecondViewController.m */; };
 		20B76FAB1964538600605B9F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20B76FAA1964538600605B9F /* Images.xcassets */; };
 		20B76FB21964538700605B9F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B76FB11964538700605B9F /* XCTest.framework */; };
 		20B76FB31964538700605B9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B76F8F1964538600605B9F /* Foundation.framework */; };
 		20B76FB41964538700605B9F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B76F931964538600605B9F /* UIKit.framework */; };
 		20B76FBC1964538700605B9F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20B76FBA1964538700605B9F /* InfoPlist.strings */; };
 		20B76FBE1964538700605B9F /* DeviceManagementSystemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B76FBD1964538700605B9F /* DeviceManagementSystemTests.m */; };
+		20B9F44619698A10002353DF /* TACDeciveListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B9F44519698A10002353DF /* TACDeciveListTableViewController.m */; };
+		20B9F44919698A1F002353DF /* TACRecordListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B9F44819698A1F002353DF /* TACRecordListTableViewController.m */; };
+		20B9F44E19698AD0002353DF /* TACDeviceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B9F44D19698AD0002353DF /* TACDeviceTableViewCell.m */; };
+		20B9F45119698ADB002353DF /* TACRecordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B9F45019698ADB002353DF /* TACRecordTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,16 +48,20 @@
 		20B76F9E1964538600605B9F /* TACAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TACAppDelegate.h; sourceTree = "<group>"; };
 		20B76F9F1964538600605B9F /* TACAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TACAppDelegate.m; sourceTree = "<group>"; };
 		20B76FA21964538600605B9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		20B76FA41964538600605B9F /* TACFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TACFirstViewController.h; sourceTree = "<group>"; };
-		20B76FA51964538600605B9F /* TACFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TACFirstViewController.m; sourceTree = "<group>"; };
-		20B76FA71964538600605B9F /* TACSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TACSecondViewController.h; sourceTree = "<group>"; };
-		20B76FA81964538600605B9F /* TACSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TACSecondViewController.m; sourceTree = "<group>"; };
 		20B76FAA1964538600605B9F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		20B76FB01964538700605B9F /* DeviceManagementSystemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeviceManagementSystemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20B76FB11964538700605B9F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		20B76FB91964538700605B9F /* DeviceManagementSystemTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DeviceManagementSystemTests-Info.plist"; sourceTree = "<group>"; };
 		20B76FBB1964538700605B9F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		20B76FBD1964538700605B9F /* DeviceManagementSystemTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceManagementSystemTests.m; sourceTree = "<group>"; };
+		20B9F44419698A10002353DF /* TACDeciveListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TACDeciveListTableViewController.h; sourceTree = "<group>"; };
+		20B9F44519698A10002353DF /* TACDeciveListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TACDeciveListTableViewController.m; sourceTree = "<group>"; };
+		20B9F44719698A1F002353DF /* TACRecordListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TACRecordListTableViewController.h; sourceTree = "<group>"; };
+		20B9F44819698A1F002353DF /* TACRecordListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TACRecordListTableViewController.m; sourceTree = "<group>"; };
+		20B9F44C19698AD0002353DF /* TACDeviceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TACDeviceTableViewCell.h; sourceTree = "<group>"; };
+		20B9F44D19698AD0002353DF /* TACDeviceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TACDeviceTableViewCell.m; sourceTree = "<group>"; };
+		20B9F44F19698ADB002353DF /* TACRecordTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TACRecordTableViewCell.h; sourceTree = "<group>"; };
+		20B9F45019698ADB002353DF /* TACRecordTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TACRecordTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,12 +124,10 @@
 				20B76F9E1964538600605B9F /* TACAppDelegate.h */,
 				20B76F9F1964538600605B9F /* TACAppDelegate.m */,
 				20B76FA11964538600605B9F /* Main.storyboard */,
-				20B76FA41964538600605B9F /* TACFirstViewController.h */,
-				20B76FA51964538600605B9F /* TACFirstViewController.m */,
-				20B76FA71964538600605B9F /* TACSecondViewController.h */,
-				20B76FA81964538600605B9F /* TACSecondViewController.m */,
 				20B76FAA1964538600605B9F /* Images.xcassets */,
 				20B76F961964538600605B9F /* Supporting Files */,
+				20B9F44A19698AA4002353DF /* ViewController */,
+				20B9F44B19698AAD002353DF /* View */,
 			);
 			path = DeviceManagementSystem;
 			sourceTree = "<group>";
@@ -155,6 +159,28 @@
 				20B76FBA1964538700605B9F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		20B9F44A19698AA4002353DF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				20B9F44419698A10002353DF /* TACDeciveListTableViewController.h */,
+				20B9F44519698A10002353DF /* TACDeciveListTableViewController.m */,
+				20B9F44719698A1F002353DF /* TACRecordListTableViewController.h */,
+				20B9F44819698A1F002353DF /* TACRecordListTableViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		20B9F44B19698AAD002353DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				20B9F44C19698AD0002353DF /* TACDeviceTableViewCell.h */,
+				20B9F44D19698AD0002353DF /* TACDeviceTableViewCell.m */,
+				20B9F44F19698ADB002353DF /* TACRecordTableViewCell.h */,
+				20B9F45019698ADB002353DF /* TACRecordTableViewCell.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,10 +281,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20B76FA61964538600605B9F /* TACFirstViewController.m in Sources */,
+				20B9F44E19698AD0002353DF /* TACDeviceTableViewCell.m in Sources */,
 				20B76F9C1964538600605B9F /* main.m in Sources */,
 				20B76FA01964538600605B9F /* TACAppDelegate.m in Sources */,
-				20B76FA91964538600605B9F /* TACSecondViewController.m in Sources */,
+				20B9F44619698A10002353DF /* TACDeciveListTableViewController.m in Sources */,
+				20B9F44919698A1F002353DF /* TACRecordListTableViewController.m in Sources */,
+				20B9F45119698ADB002353DF /* TACRecordTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +491,7 @@
 				20B76FC31964538700605B9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20B76FC41964538700605B9F /* Build configuration list for PBXNativeTarget "DeviceManagementSystemTests" */ = {
 			isa = XCConfigurationList;
@@ -471,6 +500,7 @@
 				20B76FC61964538700605B9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
