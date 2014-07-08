@@ -88,6 +88,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		204339F6196C25F100A9953C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		20B76F831964538600605B9F = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +135,7 @@
 				20B76F961964538600605B9F /* Supporting Files */,
 				20B9F44A19698AA4002353DF /* ViewController */,
 				20B9F44B19698AAD002353DF /* View */,
+				204339F6196C25F100A9953C /* Model */,
 			);
 			path = DeviceManagementSystem;
 			sourceTree = "<group>";
