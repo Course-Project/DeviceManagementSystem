@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Tom Hu">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Github入门</h1>
+					<p>
+						<small>Created by <a href="http://h1994st.com">Tom Hu</a> / <a href="http://twitter.com/h1994st">@h1994st</a></small>
+					</p>
+				</section>
+				
+				<!-- Git & Github -->
+				<section>
+					<section>
+						<h2>Git & Github</h2>
+					</section>
+
+					<section>
+						<h2>Git</h2>
+						<p>Git是一个分布式版本控制工具</p>
+						<a href="http://git-scm.com/" class="image">
+							<img src="imgs/Git-Logo-1788C.png" alt="Git" style="background-color: white;">
+						</a>
+					</section>
+
+					<section>
+						<h2>Github</h2>
+						<p>Github是一个共享虚拟主机服务，用于存放使用Git版本控制的软件代码和内容项目</p>
+						<a href="https://github.com/">
+							<img src="imgs/Octocat.png" alt="Octocat" style="background-color: white;" width="500px">
+						</a>
+					</section>
+
+					<section>
+						<h2>Git & Github</h2>
+						<ul>
+							<li>Git是工具</li>
+							<li>Github是代码仓库</li>
+						</ul>
+					</section>
+				</section>
+
+				<!-- Practice -->
+				<section>
+					<section>
+						<h2>任务</h2>
+						<p>用git来进行团队协作</p>
+						<p>今天使用GUI</p>
+					</section>
+
+					<section>
+						<h2>下载 SourceTree</h2>
+						<a href="download/SourceTree_1.9.5.dmg">
+							<img src="imgs/sourcetree.png" alt="SourceTree">
+						</a>
+						<p>(点击上图下载)</p>
+					</section>
+				</section>
+
+				<!-- Steps -->
+				<section>
+					<h2>练习</h2>
+				</section>
+
+				<section>
+					<section>
+						<h2>Step 1</h2>
+					</section>
+
+					<section>
+						<h2>打开SourceTree</h2>
+						<img src="imgs/sourcetree-index.png" alt="SourceTree Index">
+					</section>
+
+					<section>
+						<h2>Repo地址</h2>
+						<p>
+							<a href="https://github.com/h1994st/Hello-Github">h1994st/Hello-Github</a>
+						</p>
+						<pre><code>
+https://github.com/h1994st/Hello-Github.git
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>添加到SourceTree</h2>
+						<p>点击"Add Repository"</p>
+						<img src="imgs/sourcetree-addRepo.png" alt="SourceTree Add Repo">
+					</section>
+
+					<section>
+						<h2>添加后的效果</h2>
+						<img src="imgs/sourcetree-index2.png" alt="SourceTree Index 2">
+					</section>
+				</section>
+
+				<section>
+					<h2>Step 2</h2>
+
+				</section>
+
+				<section>
+					<h2>Step 3</h2>
+				</section>
+
+				<section>
+					<h2>Step 4</h2>
+				</section>
+
+				<!-- Basic -->
+
+				<!-- End -->
+				<section>
+					<h1>THE END</h1>
+					<h3>BY Tom Hu</h3>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
