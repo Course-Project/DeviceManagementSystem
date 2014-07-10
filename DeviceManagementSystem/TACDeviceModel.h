@@ -13,7 +13,7 @@ typedef NS_ENUM(NSInteger, TACDeviceType) {
     TACDeviceTypeiTouch // iTouch
 };
 
-@interface TACDeviceInfoModel : NSObject
+@interface TACDeviceModel : NSObject
 
 @property (nonatomic, strong) NSString *deviceName; // 设备名称
 @property (nonatomic) TACDeviceType deviceType; // 设备类型

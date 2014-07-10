@@ -8,7 +8,7 @@
 
 #import "TACDeciveListTableViewController.h"
 #import "TACDeviceTableViewCell.h"
-#import "TACDeviceInfoModel.h"
+#import "TACDeviceModel.h"
 
 @interface TACDeciveListTableViewController ()
 
@@ -58,7 +58,9 @@
 
 #pragma mark - Actions
 - (void)addDeviceCell {
+    TACDeviceModel *deviceModel = [[TACDeviceModel alloc] initWithDeviceName:@"" DeviceType:TACDeviceTypeiPad];
     
+    [self.deviceArray addObject:deviceModel];
     
     // 重新载入数据
     [self.tableView reloadData];

@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Tom Hu. All rights reserved.
 //
 
-#import "TACDeviceInfoModel.h"
+#import "TACDeviceModel.h"
 
-@implementation TACDeviceInfoModel
+@implementation TACDeviceModel
 
 - (id)initWithDeviceName:(NSString *)deviceName DeviceType:(TACDeviceType) deviceType {
     self = [super init];
