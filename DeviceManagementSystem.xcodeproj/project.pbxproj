@@ -10,6 +10,7 @@
 		203439E5196F132800C7752A /* TACDeviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 203439E4196F132800C7752A /* TACDeviceModel.m */; };
 		209BF312196F1AC000331A05 /* TACDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 209BF311196F1AC000331A05 /* TACDataModel.m */; };
 		209BF315196F1F3300331A05 /* TACRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 209BF314196F1F3300331A05 /* TACRecordModel.m */; };
+		209BF318196F244C00331A05 /* TACDeviceBorrowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 209BF317196F244C00331A05 /* TACDeviceBorrowViewController.m */; };
 		20B76F901964538600605B9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B76F8F1964538600605B9F /* Foundation.framework */; };
 		20B76F921964538600605B9F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B76F911964538600605B9F /* CoreGraphics.framework */; };
 		20B76F941964538600605B9F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B76F931964538600605B9F /* UIKit.framework */; };
@@ -46,6 +47,8 @@
 		209BF311196F1AC000331A05 /* TACDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TACDataModel.m; sourceTree = "<group>"; };
 		209BF313196F1F3300331A05 /* TACRecordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TACRecordModel.h; sourceTree = "<group>"; };
 		209BF314196F1F3300331A05 /* TACRecordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TACRecordModel.m; sourceTree = "<group>"; };
+		209BF316196F244C00331A05 /* TACDeviceBorrowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TACDeviceBorrowViewController.h; sourceTree = "<group>"; };
+		209BF317196F244C00331A05 /* TACDeviceBorrowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TACDeviceBorrowViewController.m; sourceTree = "<group>"; };
 		20B76F8C1964538600605B9F /* DeviceManagementSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeviceManagementSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20B76F8F1964538600605B9F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		20B76F911964538600605B9F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -189,6 +192,8 @@
 			children = (
 				20B9F44419698A10002353DF /* TACDeciveListTableViewController.h */,
 				20B9F44519698A10002353DF /* TACDeciveListTableViewController.m */,
+				209BF316196F244C00331A05 /* TACDeviceBorrowViewController.h */,
+				209BF317196F244C00331A05 /* TACDeviceBorrowViewController.m */,
 				20B9F44719698A1F002353DF /* TACRecordListTableViewController.h */,
 				20B9F44819698A1F002353DF /* TACRecordListTableViewController.m */,
 			);
@@ -306,6 +311,7 @@
 			files = (
 				20B9F44E19698AD0002353DF /* TACDeviceTableViewCell.m in Sources */,
 				209BF315196F1F3300331A05 /* TACRecordModel.m in Sources */,
+				209BF318196F244C00331A05 /* TACDeviceBorrowViewController.m in Sources */,
 				20B76F9C1964538600605B9F /* main.m in Sources */,
 				20B76FA01964538600605B9F /* TACAppDelegate.m in Sources */,
 				20B9F44619698A10002353DF /* TACDeciveListTableViewController.m in Sources */,
