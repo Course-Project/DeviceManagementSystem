@@ -7,8 +7,13 @@
 //
 
 #import "TACDeciveListTableViewController.h"
+#import "TACDeviceTableViewCell.h"
+#import "TACDeviceInfoModel.h"
 
 @interface TACDeciveListTableViewController ()
+
+@property (nonatomic, strong) NSMutableArray *deviceArray;
+@property (nonatomic, strong) NSMutableArray *borrowedDeviceArray;
 
 @end
 
@@ -22,6 +27,21 @@
     return self;
 }
 
+#pragma mark - Properties
+- (NSMutableArray *)deviceArray {
+    if (!_deviceArray) {
+        _deviceArray = [[NSMutableArray alloc] init];
+    }
+    return _deviceArray;
+}
+
+- (NSMutableArray *)borrowedDeviceArray {
+    if (!_borrowedDeviceArray) {
+        _borrowedDeviceArray = [[NSMutableArray alloc] init];
+    }
+    return _borrowedDeviceArray;
+}
+
 #pragma mark - Life Circle
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,41 +52,66 @@
 
 #pragma mark - UI Methods
 - (void)configureNavigationBar {
-    // Right bar button item - item add button
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:nil];
+    // 为navigationBar添加右侧按钮
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addDeviceCell)];
+}
+
+#pragma mark - Actions
+- (void)addDeviceCell {
+    
+    
+    // 重新载入数据
+    [self.tableView reloadData];
 }
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    #warning Potentially incomplete method implementation.
-    // Return the number of sections.
     return 2;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return @"test";
+    NSString *titleForHeader = nil;
+    
+    if (section == 0) {
+        titleForHeader = @"Avaliable";
+    } else {
+        titleForHeader = @"Borrowed";
+    }
+    
+    return titleForHeader;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    #warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 4;
+    NSUInteger numberOfRows = 0;
+    
+    if (section == 0) {
+        numberOfRows = [self.deviceArray count];
+    } else {
+        numberOfRows = [self.borrowedDeviceArray count];
+    }
+    
+    return numberOfRows;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = nil;
+    TACDeviceTableViewCell *cell = nil;
+    NSString *reuseId = nil;
     
+    // 根据Section来选择reuseId
     if (indexPath.section == 0) {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"DeviceCell" forIndexPath:indexPath];
+        reuseId = @"DeviceCell";
     } else {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"BorrowedDeviceCell" forIndexPath:indexPath];
+        reuseId = @"BorrowedDeviceCell";
     }
-
+    
+    cell = [tableView dequeueReusableCellWithIdentifier:reuseId forIndexPath:indexPath];
     
     // Configure the cell...
     
     return cell;
 }
+
+#pragma mark - UITableViewDelegate
 
 /*
 // Override to support conditional editing of the table view.
@@ -87,22 +132,6 @@
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
 }
 */
 

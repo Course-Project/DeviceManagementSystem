@@ -37,6 +37,8 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="deviceNameLabel" destination="YAw-OB-0CN" id="HTK-z5-xR5"/>
+                                    <outlet property="deviceStatusLabel" destination="r40-tC-KZk" id="S0p-3V-bSD"/>
                                     <segue destination="dKJ-Y4-Bgb" kind="push" identifier="DeviceBorrowSegue" id="QQb-0v-kbu"/>
                                 </connections>
                             </tableViewCell>
@@ -63,6 +65,10 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="deviceNameLabel" destination="Xba-T0-JXw" id="jnR-QR-LbQ"/>
+                                    <outlet property="deviceStatusLabel" destination="iGm-Rv-wXL" id="TTs-eR-hxr"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -191,8 +197,8 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Vex-rW-GRa">
             <objects>
-                <tabBarController id="8YX-ce-x5E" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                <tabBarController hidesBottomBarWhenPushed="YES" id="8YX-ce-x5E" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="JQR-rB-NYL">
                         <rect key="frame" x="0.0" y="431" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>

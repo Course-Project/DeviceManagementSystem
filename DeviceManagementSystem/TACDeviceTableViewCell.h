@@ -10,4 +10,7 @@
 
 @interface TACDeviceTableViewCell : UITableViewCell
 
+@property (nonatomic, weak) IBOutlet UILabel *deviceNameLabel;
+@property (nonatomic, weak) IBOutlet UILabel *deviceStatusLabel;
+
 @end
