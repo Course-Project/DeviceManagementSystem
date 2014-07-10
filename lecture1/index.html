@@ -4,9 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Github入门</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="description" content="Github">
 		<meta name="author" content="Tom Hu">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -103,19 +103,27 @@
 
 					<section>
 						<h2>打开下载好的文件</h2>
-						<!-- TODO - 没图片 -->
 						<img src="imgs/sourcetree-dmg.png" alt="SourceTree Install">
 					</section>
 
 					<section>
 						<h2>打开SourceTree</h2>
-						<!-- TODO - 没图片 -->
 						<img src="imgs/sourcetree-open.png" alt="SourceTree Open">
 					</section>
 
 					<section>
 						<h2>打开后的界面</h2>
-						<img src="imgs/sourcetree-index.png" alt="SourceTree Index" width="550px">
+						<img src="imgs/sourcetree-index0.png" alt="SourceTree Index">
+					</section>
+
+					<section>
+						<h2>小调整</h2>
+						<img src="imgs/sourcetree-menu.png" alt="SourceTree Menu">
+					</section>
+
+					<section>
+						<h2>调整后的界面</h2>
+						<img src="imgs/sourcetree-index.png" alt="SourceTree Index">
 					</section>
 
 					<section>
@@ -133,12 +141,16 @@ https://github.com/h1994st/Hello-Github.git
 						<h2>添加到SourceTree</h2>
 						<p>点击"Add Repository"</p>
 						<p>将上页中的"HTTPS clone URL"复制到"Source Path / URL"中</p>
-						<img src="imgs/sourcetree-addRepo.png" alt="SourceTree Add Repo" width="550px">
+						<img src="imgs/sourcetree-addRepo.png" alt="SourceTree Add Repo">
+					</section>
+
+					<section>
+						<img src="imgs/sourcetree-addRepo2.png" alt="SourceTree Add Repo 2">
 					</section>
 
 					<section>
 						<h2>添加后的效果</h2>
-						<img src="imgs/sourcetree-index2.png" alt="SourceTree Index 2" width="550px">
+						<img src="imgs/sourcetree-index2.png" alt="SourceTree Index 2">
 					</section>
 				</section>
 
@@ -146,45 +158,156 @@ https://github.com/h1994st/Hello-Github.git
 				<section>
 					<section>
 						<h2>Step 2</h2>
+						<ul>
+							<li>提交变更</li>
+						</ul>
 					</section>
 
 					<section>
 						<h2>双击打开Repo</h2>
-						<!-- TODO - 无图 -->
 						<img src="imgs/sourcetree-repo.png" alt="SourceTree Repo">
 					</section>
 
 					<section>
 						<h2>修改项目所在文件夹的内容</h2>
 						<p>修改后效果如下：</p>
-						<!-- TODO - 无图 -->
-						<img src="imgs/sourcetree-uncommitted" alt="SourceTree Uncommitted">
+						<img src="imgs/sourcetree-uncommitted.png" alt="SourceTree Uncommitted">
+					</section>
+
+					<section>
+						<h2>将变更的文件载入</h2>
+						<p>效果如下：</p>
+						<img src="imgs/sourcetree-uncommitted2.png" alt="SourceTree Uncommitted 2">
+					</section>
+
+					<section>
+						<h2>提交 Commit</h2>
+						<p>现在将此前载入的变更全部提交，让git对工作状态进行记录</p>
+						<p>点击上方的"Commit"</p>
+						<img src="imgs/sourcetree-commitButton.png" alt="SourceTree Commit Button">
+					</section>
+
+					<section>
+						<p>点击"Commit"之后会看到如下界面</p>
+						<p>我们需要在下方输入框内输入"Commit Message"</p>
+						<img src="imgs/sourcetree-committing.png" alt="SourceTree Committing">
+					</section>
+
+					<section>
+						<p>输入后</p>
+						<img src="imgs/sourcetree-committing2.png" alt="SourceTree Committing 2">
+					</section>
+
+					<section>
+						<p>点击右下角的"Commit"按钮进行提交</p>
+						<p>提交后会跳到如下界面</p>
+						<img src="imgs/sourcetree-afterCommitting.png" alt="SourceTree After Committing">
 					</section>
 				</section>
 
 				<!-- STEP 3 - push -->
 				<section>
-					<h2>Step 3</h2>
+					<section>
+						<h2>Step 3</h2>
+						<ul>
+							<li>将本地仓库推送到远端仓库(Github)</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>推送 Push</h2>
+						<p>此前做过的更改都是保存在本地，如果与他人合作开发，则需要将本地仓库推送到远端，也就是Github</p>
+						<p>点击上方的"Push"</p>
+						<img src="imgs/sourcetree-pushButton.png" alt="SourceTree Push Button">
+					</section>
+
+					<section>
+						<h2>选择推送的分支</h2>
+						<p>选择将哪个分支进行，此处修改的是"master"分支，所以选中"master"</p>
+						<img src="imgs/sourcetree-beforePushing.png" alt="SourceTree Before Pushing">
+					</section>
+
+					<section>
+						<h2>推送完成</h2>
+						<p>可以看到"master"和"origin/master"标签都已经移到第一行了，这表明本的的"master"分支和远端的"master"都是最新的，并且两者一致</p>
+						<img src="imgs/sourcetree-afterPushing.png" alt="SourceTree After Pushing">
+					</section>
 				</section>
 
 				<!-- STEP 4 - new branch -->
 				<section>
-					<h2>Step 4</h2>
-				</section>
+					<section>
+						<h2>Step 4</h2>
+						<ul>
+							<li>新建分支并进行修改</li>
+							<li>推送分支到远端</li>
+						</ul>
+					</section>
 
-				<!-- STEP 5 - push -->
-				<section>
-					<h2>Step 5</h2>
-				</section>
+					<section>
+						<h2>分支</h2>
+						<p>一个项目可以有许多分支，不同分支也可以进行合并，也可以自行发展</p>
+						<img src="imgs/git-branchs.png" alt="Git Branchs">
+					</section>
 
-				<!-- Basic -->
-				<section>
-					<h2>Basic</h2>
+					<section>
+						<h2>新建分支</h2>
+						<p>点击上方的"Branch"</p>
+						<!-- TODO - 无图 -->
+						<img src="imgs/sourcetree-branchButton.png" alt="SourceTree Branch Button">
+					</section>
+
+					<section>
+						<h2>新建分支</h2>
+						<p>输入"New Branch"的名称</p>
+						<!-- TODO - 无图 -->
+						<img src="imgs/sourcetree-newBranch.png" alt="SourceTree New Branch">
+					</section>
+
+					<section>
+						<p>新建分支后又跳到如下界面</p>
+						<p>可以看到新标签指向第一行，并且当前工作去跳到了新建的分支</p>
+						<!-- TODO - 无图 -->
+						<img src="imgs/sourcetree-afterNewBranch.png" alt="SourceTree After New Branch">
+					</section>
+
+					<section>
+						<h2>修改当前分支内容，提交并推送到远端</h2>
+						<p>步骤和前文一样</p>
+					</section>
+
+					<section>
+						<h2>预告一下乱七八糟的Merge</h2>
+						<p>这是在一系列分支后Merge的结果，如图：</p>
+						<!-- TODO - 无图 -->
+						<img src="imgs/sourcetree-merge.png" alt="SourceTree Merge">
+					</section>
 				</section>
 
 				<!-- Basic Command -->
 				<section>
-					<h2>Basic</h2>
+					<h2>Basic Commands</h2>
+					<pre><code data-trim contenteditable>
+
+git add . -A              // 载入变更
+git commit -m "..."       // 提交，在双引号中填写commie message
+git commit -v -a          // 提交前review一遍，在第一行填写commit message
+git push origin master    // 将本地的master分支推送到远端
+git pull origin master    // 获取远端数据，并合并到当前分支
+git checkour ...          // 切换到名为...的分支
+git branch ...            // 新建一个名为...的分支
+git merge ...             // 将名为...的分支合并到当前分支
+
+					</code></pre>
+					<p>更多信息参见：</p>
+					<ul>
+						<li>
+							<a href="http://git-scm.com/doc">Git Documentation</a>
+						</li>
+						<li>
+							<a href="http://git-scm.com/book/zh">Pro Git Book</a>
+						</li>
+					</ul>
 				</section>
 
 				<!-- End -->
@@ -192,7 +315,9 @@ https://github.com/h1994st/Hello-Github.git
 					<h1>THE END</h1>
 					<h3>BY Tom Hu</h3>
 				</section>
+
 			</div>
+			
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
