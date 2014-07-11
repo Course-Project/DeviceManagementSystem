@@ -13,12 +13,13 @@ typedef NS_ENUM(NSInteger, TACDeviceType) {
     TACDeviceTypeiTouch // iTouch
 };
 
-@interface TACDeviceModel : NSObject
+@interface TACDeviceModel : NSObject <NSCoding, NSCopying>
 
-@property (nonatomic, strong) NSString *deviceName; // 设备名称
-@property (nonatomic) TACDeviceType deviceType; // 设备类型
-@property (nonatomic) BOOL isBorrowed; // 是否被借走
+@property (nonatomic, copy) NSString *deviceName; // 设备名称
+@property (nonatomic, assign) TACDeviceType deviceType; // 设备类型
+@property (nonatomic, assign) BOOL isBorrowed; // 是否被借走
 
-- (id)initWithDeviceName:(NSString *)deviceName DeviceType:(TACDeviceType) deviceType;
+- (instancetype)initWithDeviceName:(NSString *)deviceName
+              DeviceType:(TACDeviceType) deviceType;
 
 @end

@@ -25,23 +25,40 @@ static TACDataModel *dataModel = nil;
 - (id)init {
     self = [super init];
     if (self) { // 如果初始化成功才进行如下操作，以防出错
-        // 从本地文件载入设备数据
+        
         NSString *deviceListPath = [self deviceListPath]; // 获取相应路径
-        NSMutableData *deviceData = [[NSMutableData alloc] initWithContentsOfFile:deviceListPath]; // 读取数据
-        if (deviceData.length != 0) { //如果文件存在且有数据，进行解码
+        if ([[NSFileManager defaultManager] fileExistsAtPath:[self deviceListPath]]) { // 检查保存设备信息的文件是否存在
+            NSMutableData *deviceData = [[NSMutableData alloc] initWithContentsOfFile:deviceListPath]; // 读取数据
             NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:deviceData];
             self.deviceArray = [unarchiver decodeObject];
             [unarchiver finishDecoding];
         }
         
-        // 从本地文件载入借记信息
         NSString *recordListPath = [self recordListPath];
-        NSMutableData *recordData = [[NSMutableData alloc] initWithContentsOfFile:recordListPath];
-        if (recordData.length != 0) {
+        if ([[NSFileManager defaultManager] fileExistsAtPath:[self recordListPath]]) { // 检查保存借记信息的文件是否存在
+            NSMutableData *recordData = [[NSMutableData alloc] initWithContentsOfFile:recordListPath];
             NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:recordData];
-            self.deviceArray = [unarchiver decodeObject];
+            self.recordArray = [unarchiver decodeObject];
             [unarchiver finishDecoding];
         }
+        
+//        // 从本地文件载入设备数据
+//        NSString *deviceListPath = [self deviceListPath]; // 获取相应路径
+//        NSMutableData *deviceData = [[NSMutableData alloc] initWithContentsOfFile:deviceListPath]; // 读取数据
+//        if (deviceData.length != 0) { //如果文件存在且有数据，进行解码
+//            NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:deviceData];
+//            self.deviceArray = [unarchiver decodeObject];
+//            [unarchiver finishDecoding];
+//        }
+//        
+//        // 从本地文件载入借记信息
+//        NSString *recordListPath = [self recordListPath];
+//        NSMutableData *recordData = [[NSMutableData alloc] initWithContentsOfFile:recordListPath];
+//        if (recordData.length != 0) {
+//            NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:recordData];
+//            self.recordArray = [unarchiver decodeObject];
+//            [unarchiver finishDecoding];
+//        }
     }
     return self;
 }
@@ -164,11 +181,11 @@ static TACDataModel *dataModel = nil;
 }
 
 - (NSString *)deviceListPath {
-    return [[self applicationDocumentsDirectoryPath] stringByAppendingString:@"/deviceList.plist"];
+    return [[self applicationDocumentsDirectoryPath] stringByAppendingPathComponent:@"deviceList.plist"];
 }
 
 - (NSString *)recordListPath {
-    return [[self applicationDocumentsDirectoryPath] stringByAppendingString:@"/recordList.plist"];
+    return [[self applicationDocumentsDirectoryPath] stringByAppendingPathComponent:@"recordList.plist"];
 }
 
 #pragma mark Sort
