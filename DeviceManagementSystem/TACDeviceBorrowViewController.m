@@ -22,14 +22,18 @@
     return self;
 }
 
+#pragma mark - Life Circle
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
-#pragma mark - Navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"%@", [self class]);
+#pragma mark - UI Methods
+
+
+#pragma mark - Actions
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
 }
 
 @end

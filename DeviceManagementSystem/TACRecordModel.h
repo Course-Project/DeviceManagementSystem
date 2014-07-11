@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TACRecordModel : NSObject
+@interface TACRecordModel : NSObject <NSCoding, NSCopying>
 
 @end

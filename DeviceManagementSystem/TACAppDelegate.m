@@ -34,6 +34,9 @@
     // Tint Color
     [[UITabBar appearance] setTintColor:UIColorFromRGB(0x067AB5)];
     
+    //Status Bar
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
+    
     return YES;
 }
 							

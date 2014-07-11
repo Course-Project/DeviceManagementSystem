@@ -14,6 +14,7 @@
 
 + (TACDataModel *)sharedDataModel; // 构造数据中心
 
+// 核心数据
 @property (nonatomic, strong) NSMutableArray *deviceArray; // 存放所有的设备信息
 @property (nonatomic, strong) NSMutableArray *recordArray; // 存放所有的借记信息
 
