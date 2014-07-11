@@ -12,7 +12,7 @@
 
 #pragma mark - init
 - (instancetype)initWithDeviceName:(NSString *)deviceName
-              DeviceType:(TACDeviceType) deviceType {
+                        DeviceType:(TACDeviceType) deviceType {
     self = [super init];
     if (self) {
         self.deviceName = deviceName;

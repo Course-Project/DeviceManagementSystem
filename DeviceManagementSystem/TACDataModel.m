@@ -177,7 +177,7 @@ static TACDataModel *dataModel = nil;
 #pragma mark - Utils
 #pragma mark Path
 - (NSString *)applicationDocumentsDirectoryPath {
-    return [NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES) lastObject];
+    return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
 }
 
 - (NSString *)deviceListPath {

@@ -31,9 +31,4 @@
 #pragma mark - UI Methods
 
 
-#pragma mark - Actions
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    
-}
-
 @end

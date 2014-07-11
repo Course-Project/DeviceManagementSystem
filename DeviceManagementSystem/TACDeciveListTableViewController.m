@@ -9,6 +9,8 @@
 #import "TACDeciveListTableViewController.h"
 #import "TACDeviceTableViewCell.h"
 #import "TACDeviceModel.h"
+#import "TACDeviceAddTableViewController.h"
+#import "TACDataModel.h"
 
 @interface TACDeciveListTableViewController ()
 
@@ -50,20 +52,25 @@
     [self configureNavigationBar];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    // 重新加载数据
+    [self.tableView reloadData];
+}
+
 #pragma mark - UI Methods
 - (void)configureNavigationBar {
     // 为navigationBar添加右侧按钮
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addDeviceCell)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                                                           target:self
+                                                                                           action:@selector(addDeviceCell)];
 }
 
 #pragma mark - Actions
 - (void)addDeviceCell {
-    TACDeviceModel *deviceModel = [[TACDeviceModel alloc] initWithDeviceName:@"" DeviceType:TACDeviceTypeiPad];
-    
-    [self.deviceArray addObject:deviceModel];
-    
-    // 重新载入数据
-    [self.tableView reloadData];
+    TACDeviceAddTableViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"DeviceAddTableViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - UITableViewDataSource
@@ -87,7 +94,7 @@
     NSUInteger numberOfRows = 0;
     
     if (section == 0) {
-        numberOfRows = [self.deviceArray count];
+        numberOfRows = [[[TACDataModel sharedDataModel] deviceArray] count];
     } else {
         numberOfRows = [self.borrowedDeviceArray count];
     }
