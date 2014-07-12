@@ -9,6 +9,7 @@
 #import "TACRecordListTableViewController.h"
 #import "TACRecordDetailTableViewController.h"
 #import "TACRecordTableViewCell.h"
+#import "TACRecordModel.h"
 
 @interface TACRecordListTableViewController ()
 
@@ -34,6 +35,12 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -62,7 +69,17 @@
     
     cell.recordModel = [[TACDataModel sharedDataModel] getRecordAtIndex:indexPath.row];
     
-    // Configure the cell...
+    cell.deviceNameLabel.text = cell.recordModel.deviceName;
+    cell.nameLabel.text = cell.recordModel.name;
+    cell.phoneLabel.text = cell.recordModel.phoneNumber;
+    
+    if ([cell.recordModel isReturn]) {
+        cell.dateLabel.text = [cell.recordModel returnDateString];
+        cell.statusLable.text = @"Returned";
+    } else {
+        cell.dateLabel.text = [cell.recordModel borrowDateString];
+        cell.statusLable.text = @"";
+    }
     
     return cell;
 }

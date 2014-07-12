@@ -15,6 +15,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *deviceNameLabel;
 @property (nonatomic, weak) IBOutlet UILabel *dateLabel;
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;
+@property (nonatomic, weak) IBOutlet UILabel *phoneLabel;
 @property (nonatomic, weak) IBOutlet UILabel *statusLable;
 
 @property (nonatomic, strong) TACRecordModel *recordModel;
