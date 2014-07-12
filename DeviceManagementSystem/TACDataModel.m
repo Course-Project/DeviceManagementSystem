@@ -201,10 +201,19 @@ NSInteger sortRecord(id l, id r, void *context) {
     TACRecordModel *lRecordModel = (TACRecordModel *)l;
     TACRecordModel *rRecordModel = (TACRecordModel *)r;
     
-    
-    
-    
-    return 0;
+    if ([lRecordModel isReturn]) { // lRecordModel已经归还
+        if ([rRecordModel isReturn]) { // rRecordModel已经归还
+            return [lRecordModel.returnDate compare:rRecordModel.returnDate]; // 对比两者的大小，以此决定顺序
+        } else { // rRecordModel未归还
+            return NSOrderedDescending; // 已归还的记录排在后面
+        }
+    } else { // lRecordModel未归还
+        if ([rRecordModel isReturn]) { // rRecordModel已经归还
+            return NSOrderedAscending;
+        } else { // rRecordModel未归还
+            return [lRecordModel.returnDate compare:rRecordModel.returnDate]; // 对比两者的大小，以此决定顺序
+        }
+    }
 }
 
 

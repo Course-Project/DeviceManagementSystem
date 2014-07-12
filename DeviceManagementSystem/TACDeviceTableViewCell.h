@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TACDeviceModel.h"
 
 @interface TACDeviceTableViewCell : UITableViewCell
 
 @property (nonatomic, weak) IBOutlet UILabel *deviceNameLabel;
 @property (nonatomic, weak) IBOutlet UILabel *deviceStatusLabel;
+
+@property (nonatomic, strong) TACDeviceModel *deviceModel;
 
 @end

@@ -29,6 +29,18 @@
 }
 
 #pragma mark - UI Methods
+- (void)configureNavigationBar {
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Add"
+                                                                              style:UIBarButtonItemStyleDone
+                                                                             target:self
+                                                                             action:@selector(addRecord)];
+    [self.navigationItem.rightBarButtonItem setTintColor:UIColorFromRGB(0xFFCA3F)];
+    [self.navigationItem.rightBarButtonItem setEnabled:NO];
+}
 
+#pragma mark - Actions
+- (void)addRecord {
+    
+}
 
 @end

@@ -10,12 +10,9 @@
 #import "TACDeviceTableViewCell.h"
 #import "TACDeviceModel.h"
 #import "TACDeviceAddTableViewController.h"
-#import "TACDataModel.h"
+#import "TACDeviceBorrowViewController.h"
 
 @interface TACDeciveListTableViewController ()
-
-@property (nonatomic, strong) NSMutableArray *deviceArray;
-@property (nonatomic, strong) NSMutableArray *borrowedDeviceArray;
 
 @end
 
@@ -27,21 +24,6 @@
         // Custom initialization
     }
     return self;
-}
-
-#pragma mark - Properties
-- (NSMutableArray *)deviceArray {
-    if (!_deviceArray) {
-        _deviceArray = [[NSMutableArray alloc] init];
-    }
-    return _deviceArray;
-}
-
-- (NSMutableArray *)borrowedDeviceArray {
-    if (!_borrowedDeviceArray) {
-        _borrowedDeviceArray = [[NSMutableArray alloc] init];
-    }
-    return _borrowedDeviceArray;
 }
 
 #pragma mark - Life Circle
@@ -75,45 +57,15 @@
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    NSString *titleForHeader = nil;
-    
-    if (section == 0) {
-        titleForHeader = @"Avaliable";
-    } else {
-        titleForHeader = @"Borrowed";
-    }
-    
-    return titleForHeader;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSUInteger numberOfRows = 0;
-    
-    if (section == 0) {
-        numberOfRows = [[[TACDataModel sharedDataModel] deviceArray] count];
-    } else {
-        numberOfRows = [self.borrowedDeviceArray count];
-    }
-    
-    return numberOfRows;
+    return [[[TACDataModel sharedDataModel] deviceArray] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    TACDeviceTableViewCell *cell = nil;
-    NSString *reuseId = nil;
-    
-    // 根据Section来选择reuseId
-    if (indexPath.section == 0) {
-        reuseId = @"DeviceCell";
-    } else {
-        reuseId = @"BorrowedDeviceCell";
-    }
-    
-    cell = [tableView dequeueReusableCellWithIdentifier:reuseId forIndexPath:indexPath];
+    TACDeviceTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DeviceCell" forIndexPath:indexPath];
     
     // Configure the cell...
     
@@ -146,7 +98,8 @@
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"%@", [self class]);
+    TACDeviceBorrowViewController *vc = segue.destinationViewController;
+    vc.deviceModel = ((TACDeviceTableViewCell *)sender).deviceModel;
 }
 
 @end

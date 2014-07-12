@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class TACDeviceModel;
+
 @interface TACDeviceBorrowViewController : UITableViewController
 
-@property (nonatomic, strong) IBOutlet UITextField *nameTextField;
-@property (nonatomic, strong) IBOutlet UITextField *phoneTextField;
+@property (nonatomic, weak) IBOutlet UITextField *nameTextField;
+@property (nonatomic, weak) IBOutlet UITextField *phoneTextField;
+@property (nonatomic, strong) TACDeviceModel *deviceModel;
 
 @end

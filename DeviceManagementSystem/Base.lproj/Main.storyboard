@@ -201,6 +201,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Device Borrow" id="Tfo-Fr-iMU"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="Qg3-wf-xcj" id="Ikg-U8-Y8E"/>
+                        <outlet property="phoneTextField" destination="Qju-hV-483" id="gKc-cQ-Ey6"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ab-40-YWz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
