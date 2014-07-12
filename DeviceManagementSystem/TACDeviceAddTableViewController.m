@@ -36,7 +36,7 @@
                                                                              target:self
                                                                              action:@selector(addDevice)];
     [self.navigationItem.rightBarButtonItem setTintColor:UIColorFromRGB(0xFFCA3F)];
-    [self.navigationItem.rightBarButtonItem setEnabled:NO];
+    [self.navigationItem.rightBarButtonItem setEnabled:YES];
 }
 
 - (void)configureGesture {
@@ -46,7 +46,7 @@
 
 #pragma mark - Actions
 - (void)addDevice {
-    NSString *deviceName = self.deviceTypeTextField.text;
+    NSString *deviceName = self.deviceNameTextField.text;
     TACDeviceType deviceType = [self.deviceTypeTextField.text isEqualToString:@"iPad"] ? TACDeviceTypeiPad : TACDeviceTypeiTouch;
     TACDeviceModel *deviceModel = [[TACDeviceModel alloc] initWithDeviceName:deviceName DeviceType:deviceType];
     

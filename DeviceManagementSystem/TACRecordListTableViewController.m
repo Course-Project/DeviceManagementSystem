@@ -7,6 +7,8 @@
 //
 
 #import "TACRecordListTableViewController.h"
+#import "TACRecordDetailTableViewController.h"
+#import "TACRecordTableViewCell.h"
 
 @interface TACRecordListTableViewController ()
 
@@ -56,11 +58,19 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RecordCell" forIndexPath:indexPath];
+    TACRecordTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RecordCell" forIndexPath:indexPath];
+    
+    cell.recordModel = [[TACDataModel sharedDataModel] getRecordAtIndex:indexPath.row];
     
     // Configure the cell...
     
     return cell;
+}
+
+#pragma mark - Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    TACRecordDetailTableViewController *vc = segue.destinationViewController;
+    vc.recordModel = ((TACRecordTableViewCell *)sender).recordModel;
 }
 
 @end

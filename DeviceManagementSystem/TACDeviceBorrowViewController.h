@@ -12,6 +12,8 @@
 
 @interface TACDeviceBorrowViewController : UITableViewController
 
+@property (nonatomic, weak) IBOutlet UILabel *deviceNameLabel;
+@property (nonatomic, weak) IBOutlet UILabel *deviceTypeLabel;
 @property (nonatomic, weak) IBOutlet UITextField *nameTextField;
 @property (nonatomic, weak) IBOutlet UITextField *phoneTextField;
 @property (nonatomic, strong) TACDeviceModel *deviceModel;
