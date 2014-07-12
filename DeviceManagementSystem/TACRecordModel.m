@@ -42,14 +42,14 @@
 
 - (NSString *)borrowDateString {
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
-    [format setDateFormat:@"YYYY-mm-DD HH:mm:ss"];
+    [format setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     
     return [format stringFromDate:self.borrowDate];
 }
 
 - (NSString *)returnDateString {
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
-    [format setDateFormat:@"YYYY-mm-DD HH:mm:ss"];
+    [format setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     
     return [format stringFromDate:self.returnDate];
 }
