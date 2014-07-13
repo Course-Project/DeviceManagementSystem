@@ -39,6 +39,20 @@
     self.phoneLabel.text = self.recordModel.phoneNumber;
     self.borrowDateLabel.text = [self.recordModel borrowDateString];
     self.returnDateLabel.text = [self.recordModel returnDateString];
+    
+    if ([self.recordModel isReturn]) {
+        self.returnButton.enabled = NO;
+    } else {
+        self.returnButton.enabled = YES;
+    }
+}
+
+#pragma mark - Actions
+- (IBAction)didClickReturnButton:(id)sender {
+    // TODO - return device
+    [[TACDataModel sharedDataModel] returnDeviceWithRecord:self.recordModel];
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

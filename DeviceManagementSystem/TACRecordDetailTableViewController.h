@@ -17,6 +17,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
 @property (weak, nonatomic) IBOutlet UILabel *borrowDateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *returnDateLabel;
+@property (weak, nonatomic) IBOutlet UIButton *returnButton;
+
 @property (nonatomic, strong) TACRecordModel *recordModel;
 
 @end

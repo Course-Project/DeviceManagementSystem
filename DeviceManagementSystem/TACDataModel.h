@@ -34,4 +34,6 @@
 
 - (void)saveData; // 将数据保存到本地
 
+- (void)returnDeviceWithRecord:(TACRecordModel *)recordModel; // 归还设备
+
 @end

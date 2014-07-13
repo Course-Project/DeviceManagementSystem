@@ -12,13 +12,15 @@
 
 #pragma mark - init
 - (instancetype)initWithName:(NSString *)name
-       PhoneNumber:(NSString *)phoneNumber
-        DeviceName:(NSString *)deviceName {
+                 PhoneNumber:(NSString *)phoneNumber
+                  DeviceName:(NSString *)deviceName
+                 DeviceIndex:(NSInteger)deviceIndex {
     self = [super init];
     if (self) {
         self.name = name;
         self.phoneNumber = phoneNumber;
         self.deviceName = deviceName;
+        self.deviceIndex = deviceIndex;
         
         _borrowDate = [NSDate date]; // 记录时间
         _returnDate = nil; // 因为借的时候并未归还，所以将returnDate设为nil
@@ -30,9 +32,6 @@
     if (![self isReturn]) { // 判断设备是否归还
         // 如未归还，则将其归还
         _returnDate = [NSDate date];
-        
-        // 更改相应的设备信息
-        // TODO
     }
 }
 
@@ -64,6 +63,7 @@
     [aCoder encodeObject:self.name forKey:@"name"];
     [aCoder encodeObject:self.phoneNumber forKey:@"phoneNumber"];
     [aCoder encodeObject:self.deviceName forKey:@"deviceName"];
+    [aCoder encodeInteger:self.deviceIndex forKey:@"deviceIndex"];
     [aCoder encodeObject:self.borrowDate forKey:@"borrowDate"];
     [aCoder encodeObject:self.returnDate forKey:@"returnDate"];
 }
@@ -74,6 +74,7 @@
         self.name = [aDecoder decodeObjectForKey:@"name"];
         self.phoneNumber = [aDecoder decodeObjectForKey:@"phoneNumber"];
         self.deviceName = [aDecoder decodeObjectForKey:@"deviceName"];
+        self.deviceIndex = [aDecoder decodeIntegerForKey:@"deviceIndex"];
         _borrowDate = [aDecoder decodeObjectForKey:@"borrowDate"];
         _returnDate = [aDecoder decodeObjectForKey:@"returnDate"];
     }
@@ -88,6 +89,8 @@
         copy.name = [self.name copyWithZone:zone];
         copy.phoneNumber = [self.phoneNumber copyWithZone:zone];
         copy.deviceName = [self.deviceName copyWithZone:zone];
+        
+        copy.deviceIndex = self.deviceIndex;
         
         copy->_borrowDate = [_borrowDate copyWithZone:zone];
         copy->_returnDate = [_returnDate copyWithZone:zone];

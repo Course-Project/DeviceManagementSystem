@@ -510,6 +510,12 @@
                                                     <state key="normal" title="Return">
                                                         <color key="titleColor" red="0.76596715329999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <state key="disabled">
+                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="didClickReturnButton:" destination="glu-Gm-llH" eventType="touchUpInside" id="rUt-Ax-PqS"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -528,6 +534,7 @@
                         <outlet property="deviceNameLabel" destination="3uh-Il-A2j" id="Cve-JU-lbB"/>
                         <outlet property="nameLabel" destination="202-Tc-pqq" id="nC1-lO-oPD"/>
                         <outlet property="phoneLabel" destination="W92-49-VpD" id="Wgd-Ck-5ja"/>
+                        <outlet property="returnButton" destination="peX-Mi-x6S" id="PVO-C4-WLb"/>
                         <outlet property="returnDateLabel" destination="TZU-Cz-Rod" id="XCb-Gt-bco"/>
                     </connections>
                 </tableViewController>

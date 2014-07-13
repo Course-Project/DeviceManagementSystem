@@ -74,6 +74,9 @@
         cell = [tableView dequeueReusableCellWithIdentifier:@"DeviceCell" forIndexPath:indexPath];
     }
     
+//    cell.accessoryType = UITableViewCellAccessoryNone;
+//    cell.userInteractionEnabled = NO;
+    
     cell.deviceModel = deviceModel;
     
     cell.deviceNameLabel.text = deviceModel.deviceName;

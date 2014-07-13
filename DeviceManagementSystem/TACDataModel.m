@@ -149,6 +149,27 @@ static TACDataModel *dataModel = nil;
     return [self.recordArray objectAtIndex:index];
 }
 
+- (TACDeviceModel *)getDeviceWithDeviceIndex:(NSInteger)deviceIndex {
+    for (TACDeviceModel *dm in self.deviceArray) {
+        if (dm.deviceIndex == deviceIndex) {
+            return dm;
+        }
+    }
+    return nil;
+}
+
+#pragma mark - Return
+- (void)returnDeviceWithRecord:(TACRecordModel *)recordModel {
+    [recordModel returnDevice];
+    
+    TACDeviceModel *dm = [self getDeviceWithDeviceIndex:recordModel.deviceIndex];
+    dm.isBorrowed = NO;
+    
+    [self.recordArray sortedArrayUsingFunction:sortRecord context:nil];
+    
+    [self saveData];
+}
+
 #pragma mark - Save
 // 将数据保存到本地
 - (void)saveData {

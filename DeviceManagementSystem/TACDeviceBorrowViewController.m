@@ -63,7 +63,9 @@
     NSString *name = self.nameTextField.text;
     NSString *phone = self.phoneTextField.text;
     
-    TACRecordModel *recordModel = [[TACRecordModel alloc] initWithName:name PhoneNumber:phone DeviceName:self.deviceModel.deviceName];
+    self.deviceModel.isBorrowed = YES;
+    
+    TACRecordModel *recordModel = [[TACRecordModel alloc] initWithName:name PhoneNumber:phone DeviceName:self.deviceModel.deviceName DeviceIndex:self.deviceModel.deviceIndex];
     
     [[TACDataModel sharedDataModel] addRecord:recordModel];
     

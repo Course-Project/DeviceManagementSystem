@@ -15,6 +15,7 @@
                         DeviceType:(TACDeviceType) deviceType {
     self = [super init];
     if (self) {
+        _deviceIndex = [[[TACDataModel sharedDataModel] deviceArray] count];
         self.deviceName = deviceName;
         self.deviceType = deviceType;
         self.isBorrowed = NO;
@@ -24,6 +25,7 @@
 
 #pragma mark - NSCoding
 - (void)encodeWithCoder:(NSCoder *)aCoder {
+    [aCoder encodeInteger:self.deviceIndex forKey:@"deviceIndex"];
     [aCoder encodeObject:self.deviceName forKey:@"deviceName"];
     [aCoder encodeInteger:self.deviceType forKey:@"deviceType"];
     [aCoder encodeBool:self.isBorrowed forKey:@"isBorrowed"];
@@ -32,6 +34,7 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super init];
     if (self) {
+        _deviceIndex = [aDecoder decodeIntegerForKey:@"deviceIndex"];
         self.deviceName = [aDecoder decodeObjectForKey:@"deviceName"];
         self.deviceType = [aDecoder decodeIntegerForKey:@"deviceType"];
         self.isBorrowed = [aDecoder decodeBoolForKey:@"isBorrowed"];
@@ -44,6 +47,7 @@
     TACDeviceModel *copy = [[[self class] allocWithZone:zone] init];
     
     if (copy) {
+        copy->_deviceIndex = self.deviceIndex;
         copy.deviceName = [self.deviceName copyWithZone:zone];
         copy.deviceType = self.deviceType;
         copy.isBorrowed = self.isBorrowed;
