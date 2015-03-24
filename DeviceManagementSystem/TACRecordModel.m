@@ -54,8 +54,7 @@
 }
 
 - (NSString *)description {
-    // TODO
-    return [super description];
+    return [NSString stringWithFormat:@"%@(%@) %@", (self.isReturn ? @"Returned" : @"Not returned"), (self.isReturn ? self.returnDate : self.borrowDate), self.name];
 }
 
 #pragma mark - NSCoding

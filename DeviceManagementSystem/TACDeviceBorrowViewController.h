@@ -10,7 +10,7 @@
 
 @class TACDeviceModel;
 
-@interface TACDeviceBorrowViewController : UITableViewController
+@interface TACDeviceBorrowViewController : UITableViewController <UITextFieldDelegate>
 
 @property (nonatomic, weak) IBOutlet UILabel *deviceNameLabel;
 @property (nonatomic, weak) IBOutlet UILabel *deviceTypeLabel;

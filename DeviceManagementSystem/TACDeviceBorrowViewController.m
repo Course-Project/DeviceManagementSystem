@@ -78,4 +78,14 @@
     [self.phoneTextField resignFirstResponder];
 }
 
+#pragma mark - UITextFieldDelegate
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if ([textField isEqual:self.nameTextField]) {
+        [self.phoneTextField becomeFirstResponder];
+    } else {
+        [self addRecord];
+    }
+    return YES;
+}
+
 @end
